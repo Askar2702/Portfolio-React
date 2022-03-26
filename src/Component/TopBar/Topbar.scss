@@ -9,6 +9,11 @@
   top: 0;
   z-index: 3;
   transition: all 1s ease;
+  &.false {
+    .logo {
+      color: $mainColor;
+    }
+  }
 
   .wrapper {
     padding: 10px 30px;
@@ -24,7 +29,6 @@
         font-size: 40px;
         font-weight: 700;
         text-decoration: none;
-        // color: currentColor;
         margin-right: 40px;
       }
       .itemContainer {
@@ -38,6 +42,10 @@
         span {
           font-size: 15px;
           font-weight: 500;
+        }
+
+        @include mobile {
+          display: none;
         }
       }
     }
@@ -57,11 +65,6 @@
           transform-origin: left;
           transition: all 2s ease;
         }
-      }
-    }
-    &.false {
-      .logo {
-        color: $mainColor;
       }
     }
   }
